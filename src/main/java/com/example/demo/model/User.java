@@ -2,14 +2,16 @@ package com.example.demo.model;
 
 import lombok.Data;
 
-
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Set;
 
 @Data
+@Entity
 public class User {
 
 
+    @Id
     private int id;
 
     private String name;
@@ -18,7 +20,7 @@ public class User {
 
     private String username;
 
-    private Set<Authority> authorities;
+    //private Set<Authority> authorities;
 
 
 }
