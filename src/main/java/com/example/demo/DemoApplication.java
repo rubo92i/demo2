@@ -22,13 +22,13 @@ public class DemoApplication {
 
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         CustomAspectProcessor.applicationContext = SpringApplication.run(DemoApplication.class, args);
-        CustomAspectProcessor.process(TestController.class);
+      /*  CustomAspectProcessor.process(TestController.class);
 
         ResponseEntity responseEntity = RestContainer.invokeInternal("/user/getByUsername","rubenmanukyan1993@gmail.com");
 
         ResponseEntity responseEntity2 = RestContainer.invokeInternal("/user/getById",3);
         System.out.println(responseEntity2.getBody());
-        System.out.println(responseEntity.getBody());
+        System.out.println(responseEntity.getBody());*/
     }
 
 

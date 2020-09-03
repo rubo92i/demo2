@@ -1,7 +1,7 @@
 package com.example.demo.rest;
 
 
-import com.example.demo.model.UserRepository;
+import com.example.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
