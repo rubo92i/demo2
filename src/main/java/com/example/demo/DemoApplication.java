@@ -3,6 +3,8 @@ package com.example.demo;
 import com.example.demo.rest.CustomAspectProcessor;
 import com.example.demo.rest.RestContainer;
 import com.example.demo.rest.TestController;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,6 +33,10 @@ public class DemoApplication {
         System.out.println(responseEntity.getBody());*/
     }
 
+    @Bean
+    public MessageConverter jsonMessageConverter() {
+        return new Jackson2JsonMessageConverter();
+    }
 
 
     @Value("${spring.token.datasource.url}")
